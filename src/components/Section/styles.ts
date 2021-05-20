@@ -28,6 +28,8 @@ export const Item = styled.div`
   box-sizing: border-box;
   margin-bottom: 30px;
   height: auto;
+  overflow: hidden;
+  word-wrap: break-word;
   ${respondToCustomWidth(BREAKPOINT.laptop)} {
     width: 90%;
   }
@@ -57,5 +59,4 @@ export const ItenProperties = styled.p`
 export const Span = styled.span`
   font-weight: bold;
   font-size: 16px;
-  overflow: auto;
 `;
