@@ -13,10 +13,16 @@ import {
 
 export const Section: React.FC<{}> = () => {
   const data = useSelector(selectRepositories);
-
+  interface Data {
+    id: number;
+    html_url: string;
+    name: string;
+    language: string;
+    description: string;
+  }
   return (
     <SectionWrapper>
-      {data?.map((item) => {
+      {data?.map((item: Data) => {
         return (
           <Item key={item?.id}>
             <LinkItem href={item?.html_url} target="blank">

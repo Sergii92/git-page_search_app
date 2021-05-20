@@ -12,13 +12,13 @@ export const Aside: React.FC<Props> = ({ debounced }) => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     debounced(e.currentTarget.value);
   };
-  const searchParams = useSelector(selectSearchStr);
+  const searchParams: string[] = useSelector(selectSearchStr);
 
   return (
     <AsideWrapper>
       <Input onChange={onChange} />
       <List>
-        {searchParams?.map((item) => {
+        {searchParams.map((item: string) => {
           return <ListItem key={item}>{item}</ListItem>;
         })}
       </List>

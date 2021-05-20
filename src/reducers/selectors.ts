@@ -1,2 +1,3 @@
-export const selectRepositories = (state) => state.repositories.repositories;
-export const selectSearchStr = (state) => state.repositories.searchResults;
+export const selectRepositories = (state: any) =>
+  state.repositories.repositories;
+export const selectSearchStr = (state: any) => state.repositories.searchResults;

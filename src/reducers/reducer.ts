@@ -1,6 +1,8 @@
 import { TYPES } from "./types";
 import { setSerchItemsHelper } from "./helpers/helper";
 
+import { AnyAction } from "redux";
+
 const initialState = {
   repositories: [],
   searchResults: [],
@@ -8,23 +10,23 @@ const initialState = {
 
 export const repositoriesReducer = (
   state = initialState,
-  { type, payload }
+  action: AnyAction
 ) => {
-  switch (type) {
+  switch (action.type) {
     case TYPES.GET_REPOSITORIES:
       return {
         ...state,
-        repositories: payload,
+        repositories: action.payload,
       };
     case TYPES.SET_SEARCH_STR:
       return {
         ...state,
-        searchResults: payload,
+        searchResults: action.payload,
       };
     case TYPES.SET_SINGL_SEARH:
       return {
         ...state,
-        searchResults: setSerchItemsHelper(state.searchResults, payload),
+        searchResults: setSerchItemsHelper(state.searchResults, action.payload),
       };
     default:
       return state;
