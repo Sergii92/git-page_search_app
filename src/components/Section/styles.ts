@@ -57,4 +57,5 @@ export const ItenProperties = styled.p`
 export const Span = styled.span`
   font-weight: bold;
   font-size: 16px;
+  overflow: auto;
 `;
