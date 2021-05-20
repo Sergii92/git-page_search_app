@@ -1,4 +1,4 @@
-export const setSerchItemsHelper = (array, value) => {
+export const setSerchItemsHelper = (array: string[], value: string) => {
   let result = [];
 
   result = [...array, value];

@@ -1,22 +1,21 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useDebouncedCallback } from "use-debounce";
 import styled from "styled-components";
-import { useGetrepositories } from "reducers/hoocks/useGetRepositories";
-import { repositoriesActions } from "reducers/actions";
-import { selectSearchStr } from "reducers/selectors";
+import { useGetrepositories } from "../reducers/hoocks/useGetRepositories";
+import { repositoriesActions } from "../reducers/actions";
+import { selectSearchStr } from "../reducers/selectors";
 import {
   getAllFromLocalStorage,
   setAllToLocalStorage,
-} from "helpers/localStorageHalper";
-import { Header } from "components/Header/Header";
-import { Main } from "components/Main/Main";
+} from "../helpers/localStorageHalper";
+import { Header } from "../components/Header/Header";
+import { Main } from "../components/Main/Main";
 
-const HomePage = () => {
+const HomePage: React.FC<{}> = () => {
   const dispatch = useDispatch();
 
-  const debounced = useDebouncedCallback((value) => {
+  const debounced = useDebouncedCallback((value: string) => {
     getRepositories(value);
     dispatch(repositoriesActions.setSinglSearch(value));
   }, 1500);
@@ -34,7 +33,6 @@ const HomePage = () => {
   //set search str from redux store to localStorage beforeunload
   useEffect(() => {
     const setHandler = () => {
-      console.log("searchResults", searchResults);
       setAllToLocalStorage(searchResults);
     };
     window.addEventListener("beforeunload", setHandler, false);

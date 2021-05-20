@@ -43,7 +43,7 @@ export const Tile = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: ${(props) => props.size};
+  font-size: ${(props: { size?: string }) => props.size};
   color: #d1cbae;
   margin: 0px;
   line-height: 1em;

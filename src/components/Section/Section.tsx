@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectRepositories } from "reducers/selectors";
+import { selectRepositories } from "../../reducers/selectors";
 
 import {
   SectionWrapper,
@@ -11,7 +11,7 @@ import {
   Span,
 } from "./styles";
 
-export const Section = () => {
+export const Section: React.FC<{}> = () => {
   const data = useSelector(selectRepositories);
 
   return (

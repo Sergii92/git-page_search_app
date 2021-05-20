@@ -1,4 +1,4 @@
-import { TYPES } from "reducers/types";
+import { TYPES } from "./types";
 
 export const repositoriesActions = {
   fillrepositories: (repositories) => ({

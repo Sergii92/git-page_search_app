@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { respondToCustomWidth } from "asets/css/utils";
-import { BREAKPOINT } from "constants/breakpoints";
+import { respondToCustomWidth } from "../../asets/css/utils";
+import { BREAKPOINT } from "../../constants/breakpoints";
 
 export const AsideWrapper = styled.div`
   width: 30%;

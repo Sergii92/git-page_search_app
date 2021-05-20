@@ -1,11 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectSearchStr } from "reducers/selectors";
+import { selectSearchStr } from "../../reducers/selectors";
 
 import { AsideWrapper, Input, List, ListItem } from "./styles";
 
-export const Aside = ({ debounced }) => {
-  const onChange = (e) => {
+export type Props = {
+  debounced: (value: string) => void;
+};
+
+export const Aside: React.FC<Props> = ({ debounced }) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     debounced(e.currentTarget.value);
   };
   const searchParams = useSelector(selectSearchStr);

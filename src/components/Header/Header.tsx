@@ -8,13 +8,13 @@ import {
   HeaderDesc,
 } from "./styles";
 
-export const Header = () => {
+export const Header: React.FC<{}> = () => {
   return (
     <HeaderWrapper>
       <LogoWrapper>
         <LogoImg />
         <Tile>
-          <Text size={"26px"}>reQuestum</Text>
+          <Text size="26px">reQuestum</Text>
           <Text> web development company</Text>
         </Tile>
       </LogoWrapper>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { BREAKPOINT } from "constants/breakpoints";
-import { respondToCustomWidth } from "asets/css/utils";
+import { BREAKPOINT } from "../../constants/breakpoints";
+import { respondToCustomWidth } from "../../asets/css/utils";
 
 export const SectionWrapper = styled.div`
   width: 70%;

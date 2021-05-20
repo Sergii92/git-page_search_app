@@ -1,8 +1,8 @@
-export const setAllToLocalStorage = (searchArr) => {
+export const setAllToLocalStorage = (searchArr: string[]) => {
   localStorage.setItem("SerchParam", JSON.stringify(searchArr));
 };
 
-export const getAllFromLocalStorage = () => {
+export const getAllFromLocalStorage = (): string[] => {
   const searchResalt = localStorage.getItem("SerchParam") || "[]";
   return JSON.parse(searchResalt);
 };

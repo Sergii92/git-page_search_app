@@ -1,5 +1,5 @@
-import { TYPES } from "reducers/types";
-import { setSerchItemsHelper } from "reducers/helpers/helper";
+import { TYPES } from "./types";
+import { setSerchItemsHelper } from "./helpers/helper";
 
 const initialState = {
   repositories: [],
