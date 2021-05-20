@@ -24,7 +24,7 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding-left: 20px;
+  padding: 20px;
   box-sizing: border-box;
   margin-bottom: 30px;
   height: auto;

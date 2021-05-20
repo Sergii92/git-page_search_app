@@ -11,7 +11,6 @@ export const AsideWrapper = styled.div`
     margin-bottom: 10px;
   }
 `;
-
 export const Input = styled.input`
   border-radius: 20px;
   height: 30px;

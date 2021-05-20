@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useDebouncedCallback } from "use-debounce";
-import styled from "styled-components";
+
 import { useGetrepositories } from "../reducers/hoocks/useGetRepositories";
 import { repositoriesActions } from "../reducers/actions";
 import { selectSearchStr } from "../reducers/selectors";
@@ -9,6 +9,8 @@ import {
   getAllFromLocalStorage,
   setAllToLocalStorage,
 } from "../helpers/localStorageHalper";
+
+import styled from "styled-components";
 import { Header } from "../components/Header/Header";
 import { Main } from "../components/Main/Main";
 
