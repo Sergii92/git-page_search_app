@@ -9,10 +9,11 @@ export type Props = {
 };
 
 export const Aside: React.FC<Props> = ({ debounced }) => {
+  const searchParams: string[] = useSelector(selectSearchStr);
+
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     debounced(e.currentTarget.value);
   };
-  const searchParams: string[] = useSelector(selectSearchStr);
 
   return (
     <AsideWrapper>
