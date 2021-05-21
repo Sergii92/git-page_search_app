@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { respondToCustomWidth } from "../../asets/css/utils";
+import { BREAKPOINT } from "../../constants/breakpoints";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -19,12 +21,20 @@ export const HeaderWrapper = styled.div`
     background-color: #d1cbae;
     opacity: 0.7;
   }
+  ${respondToCustomWidth(BREAKPOINT.laptop)} {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   width: 30%;
   max-width: 500px;
   display: flex;
+  ${respondToCustomWidth(BREAKPOINT.laptop)} {
+    width: 100%;
+  }
 `;
 
 export const LogoImg = styled.div`
@@ -35,11 +45,18 @@ export const LogoImg = styled.div`
   background-position: center;
   background-size: contain;
   margin-right: 10px;
+  ${respondToCustomWidth(BREAKPOINT.laptop)} {
+    display: none;
+  }
 `;
 
 export const Tile = styled.div`
   display: flex;
   flex-direction: column;
+  ${respondToCustomWidth(BREAKPOINT.laptop)} {
+    display: block;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Text = styled.p`
