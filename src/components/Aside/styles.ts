@@ -18,8 +18,8 @@ export const Input = styled.input`
   padding-left: 15px;
   outline: 0;
   width: 100%;
+  box-sizing: border-box;
 `;
-export const Form = styled.form``;
 
 export const AsideHeader = styled.h2`
   color: white;
