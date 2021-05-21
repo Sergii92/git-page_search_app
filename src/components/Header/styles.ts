@@ -55,6 +55,7 @@ export const Tile = styled.div`
   flex-direction: column;
   ${respondToCustomWidth(BREAKPOINT.laptop)} {
     display: block;
+    margin: 0 auto;
     margin-bottom: 10px;
   }
 `;
